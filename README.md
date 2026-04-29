@@ -73,13 +73,6 @@ Current build status
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ini-file-feedstock?branchName=main&jobName=win&configuration=win%20win_64_" alt="variant">
                 </a>
               </td>
-            </tr><tr>
-              <td>win_arm64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=28134&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/ini-file-feedstock?branchName=main&jobName=win&configuration=win%20win_arm64_" alt="variant">
-                </a>
-              </td>
             </tr>
           </tbody>
         </table>
@@ -210,7 +203,4 @@ Feedstock Maintainers
 =====================
 
 * [@salim-b](https://github.com/salim-b/)
-
-
-<!-- dummy commit to enable rerendering -->
 
