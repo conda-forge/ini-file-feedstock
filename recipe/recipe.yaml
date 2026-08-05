@@ -1,5 +1,5 @@
 context:
-  version: "1.4.9"
+  version: "1.4.10"
 
 package:
   name: ini-file
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/bitnami/ini-file/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 3c460cf5d30145d46517b1d95a8bf2e38dc59e2290e70ace89d5ab6d8abbf15b
+  sha256: eb4cc92095f27f0d6cb1a091a53b539deab5d2998ba4a736756fb2cabd7213cb
 
 build:
-  number: 1
+  number: 0
   script:
     - go-licenses save . --save_path=library_licenses
     - if: unix
