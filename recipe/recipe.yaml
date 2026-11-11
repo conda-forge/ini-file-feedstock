@@ -18,13 +18,12 @@ build:
       # build main app and generate license data
       - let build_time = date now | format date "%Y-%m-%dT%H:%M:%SZ"
       - let short_commit_hash = (http get https://api.github.com/repos/bitnami/ini-file/commits/v${{ version }}).sha | str substring 0..6
-      - go build
-        -o ($prefix)/bin/
+      - ^go build
+        -o=($prefix)/bin/
         -v
         -ldflags=$'-s -w -X main.buildDate=($build_time) -X main.commit=($short_commit_hash) -X main.version=${{ version }}'
-        -trimpath
         .
-      - go-licenses save . --save_path=library_licenses
+      - ^go-licenses save . --save_path=library_licenses
 
 requirements:
   build:
@@ -46,7 +45,7 @@ tests:
 about:
   summary: A CLI tool for manipulating INI files
   description: |
-    ini-file is a command-line tool that allows manipulating INI files.
+    `ini-file` is a command-line tool that allows manipulating INI files.
     It supports setting, getting, and deleting values in INI files.
   license: Apache-2.0
   license_file:
